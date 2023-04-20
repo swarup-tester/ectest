@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+Colors-
+Light Yellow = #C69749;
+Dark Yellow = #735F32;
+Light Black = #282A3A;
+Black = #000000
+*/
+*{
+    font-family: Poppins;
+}
+button{
+    background: #C69749 !important;
+    color:#FFF !important;
+    padding: 10px 30px !important;
+    border-radius:30px !important;
+}
+button:hover{
+    background: #735F32 !important;
+}
+p{
+    line-height: 1.7em;
+}

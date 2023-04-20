@@ -1,0 +1,76 @@
+<div class="container pt-5 pb-5">
+  <h1 class="text-center">Category</h1>
+  <div class="row mt-5"> 
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let category of categories">
+      <div class="card text-center">
+          <img class="card-img-top" src={{category.image}} alt="Card image"> 
+          <div class="card-body">
+            <h4 class="card-title">{{category.category}}</h4> 
+            <p class="card-text">{{category.desc | excerpt}}</p>
+            <a routerLink="{{category.category.toLowerCase()}}"><button class="btn">See Products</button></a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container pt-5 pb-5">
+    <h1 class="text-center">Category</h1>
+    <div class="row mt-5"> 
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card text-center">
+            <img class="card-img-top" src="../../assets/furnitures.jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Furnitures</h4>
+              <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+              <a routerLink="furnitures"><button class="btn">See Products</button></a>
+            </div>
+          </div>
+    </div>
+       
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center">
+                <img class="card-img-top" src="../../assets/garments.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">Garments</h4>
+                  <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+                  <a routerLink="garments"><button class="btn">See Products</button></a>
+                </div>
+              </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card text-center">
+              <img class="card-img-top" src="../../assets/mobiles.jpg" alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title">Mobiles</h4>
+                <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+                <a routerLink="mobiles"><button class="btn">See Products</button></a>
+              </div>
+            </div>
+      </div>
+
+
+    </div>
+</div> -->

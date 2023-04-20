@@ -1,0 +1,20 @@
+header{
+    background:  #C69749;
+}
+header nav a{
+    color: #fff;
+}
+header a.navbar-brand{
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight:700;
+    font-size:30px;
+}
+.navbar-toggler{
+    border:none;
+    padding:0 !important;
+    color: #fff;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+    background:none !important;
+}

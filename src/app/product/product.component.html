@@ -1,0 +1,45 @@
+<div class="container pt-5 pb-5"> 
+    <div class="row" *ngIf="productDetails" id="{{productDetails.category}}">  
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 left_col">
+            <div class="main_image">
+                <img src={{productDetails.image}} class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 right_col">
+            <h1>{{productDetails.name}}</h1>
+            <p>{{productDetails.desc}}</p>
+            <em>Extra 15% off!</em>
+            <h3 class="mt-4">MRP: <s>{{productDetails.mrp}}</s><br>
+                Price: {{productDetails.price}}</h3>
+
+            <div class="btns mt-4">
+                    <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                    <a routerLink="/"><button class="btn">Buy Now</button></a>
+            </div>
+        </div> 
+    </div>
+
+
+    
+   <div class="row mt-5" *ngIf="relatedProducts[0]" id="relatedProducts">
+    <h2 class="text-center">Related Products</h2>  
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let product of relatedProducts" id="{{product.category}}"> 
+        <div class="card text-center">
+            <img class="card-img-top" src={{product.image}} alt="Card image" style="object-fit:cover;">
+            <div class="card-body">
+            <h4 class="card-title">{{product.name}}</h4>
+            <h5>MRP: <s>{{product.mrp}}</s><br>
+                Price: {{product.price}}</h5>
+            <p class="card-text">{{product.desc | excerpt}}</p>
+            <div class="btns">
+                <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                <a routerLink="/category/{{product.category.toLowerCase()}}/{{product.name | modifyurl}}"><button class="btn">Buy Now</button></a>
+            </div>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+</div>

@@ -1,0 +1,140 @@
+<div class="container pt-5 pb-5">
+    <h1 class="text-center">{{category[0].toUpperCase()+category.slice(1)}}</h1>
+    <div class="row mt-5" *ngIf="products" id="{{category}}">  
+            <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let product of products">
+                <div class="card text-center">
+                    <img class="card-img-top" src={{product.image}} alt="Card image" style="object-fit:cover;">
+                    <div class="card-body">
+                    <h4 class="card-title">{{product.name}}</h4>
+                    <h5>MRP: <s>{{product.mrp}}</s><br>
+                        Price: {{product.price}}</h5>
+                    <p class="card-text">{{product.desc | excerpt}}</p>
+                    <div class="btns">
+                        <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                        <a routerLink="{{product.name | modifyurl}}"><button class="btn">Buy Now</button></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container pt-5 pb-5">
+    <h1 class="text-center">{{category[0].toUpperCase()+category.slice(1)}}</h1>
+   
+******************** Mobiles **********************
+<div class="row mt-5" *ngIf="category=='mobiles'"> 
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center">
+                <img class="card-img-top" src="../../assets/asus-mobile.jpg" alt="Card image" style="object-fit:cover;">
+                <div class="card-body">
+                <h4 class="card-title">ASUS ROG 5s (8GB, 256GB)</h4>
+                <h5>MRP: <s>₹65,999</s><br>
+                    Price: ₹49,499</h5>
+                <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+                <div class="btns">
+                    <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                    <a routerLink="asus-rog-5"><button class="btn">Buy Now</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+</div>
+******************** Mobiles **********************
+
+
+******************** Garments **********************
+<div class="row mt-5" *ngIf="category=='garments'"> 
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card text-center">
+            <img class="card-img-top" src="../../assets/urbano-jeans.png" alt="Card image">
+            <div class="card-body">
+            <h4 class="card-title">Urbano Fashion Jeans</h4>
+            <h5>MRP: <s>₹899</s><br>
+                Price: ₹399</h5>
+            <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+            <div class="btns">
+                <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                <a routerLink="urbano-fashion-jeans"><button class="btn">Buy Now</button></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card text-center">
+            <img class="card-img-top" src="../../assets/men-shirt.png" alt="Card image">
+            <div class="card-body">
+            <h4 class="card-title">Vebnor Formal Shirt</h4>
+            <h5>MRP: <s>₹1,599</s><br>
+                Price: ₹799</h5>
+            <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+            <div class="btns">
+                <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                <a routerLink="urbano-fashion-jeans"><button class="btn">Buy Now</button></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card text-center">
+            <img class="card-img-top" src="../../assets/trouser.png" alt="Card image">
+            <div class="card-body">
+            <h4 class="card-title">Acton Men Track Pants</h4>
+            <h5>MRP: <s>₹1,599</s><br>
+                Price: ₹799</h5>
+            <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+            <div class="btns">
+                <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                <a routerLink="urbano-fashion-jeans"><button class="btn">Buy Now</button></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+******************** Garments **********************
+
+
+******************** Furnitures **********************
+<div class="row mt-5" *ngIf="category=='furnitures'"> 
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card text-center">
+            <img class="card-img-top" src="../../assets/royal-sofa.jpg" alt="Card image" style="object-fit:cover;">
+            <div class="card-body">
+            <h4 class="card-title">Lifestyle Royal 6 Seater Sofa </h4>
+            <h5>MRP: <s>₹65,999</s><br>
+                Price: ₹49,499</h5>
+            <p class="card-text">From understanding your requirements, develop a website and delivering the final product.</p>
+            <div class="btns">
+                <a routerLink="/"><button class="btn">Add to Cart</button></a>
+                <a routerLink="royal-sofa"><button class="btn">Buy Now</button></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+******************** Furnitures **********************
+
+</div> -->
